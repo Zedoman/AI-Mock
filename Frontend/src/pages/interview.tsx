@@ -33,18 +33,17 @@ const Interview = () => {
 
     switch (language) {
       case "javascript":
-        return "// Write your code here\n";
+        return "// Write your code here twoSum(nums, target)\n";
       case "python":
-        return "# Write your code here\n";
+        return "# Write your code here twoSum(nums, target)\n";
       case "java":
-        return "// Write your code here\n";
+        return "// Write your code here twoSum(nums, target)\n";
       default:
-        return "// Write your code here\n";
+        return "// Write your code here twoSum(nums, target)\n";
     }
   });
 
   const [consoleOutput, setConsoleOutput] = useState<string[]>([]);
-  const [isRunning, setIsRunning] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackData, setFeedbackData] = useState<{
@@ -257,42 +256,6 @@ const Interview = () => {
     setCode(newCode);
   };
 
-  const handleRun = async () => {
-    setIsRunning(true);
-    setConsoleOutput(["Running code..."]);
-    try {
-      // Clean the code before running
-      const cleanedCode = code.replace(/\/\/ Write your code here\n/, '').trim();
-      if (!cleanedCode) {
-        setConsoleOutput(["Error: No code to run"]);
-        setIsRunning(false);
-        return;
-      }
-
-      const response = await axios.post(
-        "https://34.207.159.158/api/code/submit",
-        {
-          userId: "user123",
-          jobId,
-          code: cleanedCode,
-          language,
-        },
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      const result = response.data.data.compilationResult;
-      setConsoleOutput([
-        "Run Complete:",
-        `Output: ${result.output}`,
-        `Tests passed: ${result.testCaseResults.filter((r: any) => r.success).length}/${result.testCaseResults.length}`,
-      ]);
-    } catch (err) {
-      setConsoleOutput(["Error running code: " + (err.response?.data?.message || err.message)]);
-    } finally {
-      setIsRunning(false);
-    }
-  };
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
@@ -452,7 +415,6 @@ const Interview = () => {
             language={language}
             onCodeChange={handleCodeChange}
             onLanguageChange={handleLanguageChange}
-            onRun={handleRun}
             onSubmit={handleSubmit}
             onReset={handleReset}
             onSave={handleSave}
