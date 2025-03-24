@@ -2,6 +2,8 @@
 
 A professional coding interview platform that allows users to practice job-specific technical interviews with AI-powered code review and feedback. Built with modern web technologies, this platform provides a seamless experience for developers to enhance their technical interview skills and land their dream jobs.
 
+use twoSum as func name for Two sum use reverse as func name for Reverse
+
 ## Overview
 
 The AI Mock Interview Simulator is designed to help job seekers prepare for technical interviews by simulating real-world coding challenges. Users can browse job listings, select a position, and engage in a mock interview with a LeetCode-style coding interface. After submitting their solutions, users receive detailed AI-powered feedback, including performance analysis, improvement suggestions, and optimized solution examples.
