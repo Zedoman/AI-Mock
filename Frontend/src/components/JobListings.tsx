@@ -58,7 +58,7 @@ const JobListings = ({
   const fetchJobs = async (page: number) => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:5000/api/jobs", {
+      const response = await axios.get("http://34.207.159.158:5000/api/jobs", {
         params: { page, limit: JOBS_PER_PAGE },
         headers: { "Content-Type": "application/json" },
       });
