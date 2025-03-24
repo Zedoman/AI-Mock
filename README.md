@@ -6,6 +6,10 @@ A professional coding interview platform that allows users to practice job-speci
 
 The AI Mock Interview Simulator is designed to help job seekers prepare for technical interviews by simulating real-world coding challenges. Users can browse job listings, select a position, and engage in a mock interview with a LeetCode-style coding interface. After submitting their solutions, users receive detailed AI-powered feedback, including performance analysis, improvement suggestions, and optimized solution examples.
 
+
+https://github.com/user-attachments/assets/9eb4ad20-e5db-4113-9173-c174ea8a6ea1
+
+
 ## Features
 
 ### **Job Listings View**  
