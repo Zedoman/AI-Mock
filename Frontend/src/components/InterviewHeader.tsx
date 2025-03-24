@@ -35,7 +35,7 @@ const InterviewHeader = ({
     const fetchJob = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://34.207.159.158:5000/api/jobs/${jobId}`);
+        const response = await axios.get(`https://34.207.159.158/api/jobs/${jobId}`);
         const job = response.data.data; // Assuming your backend wraps job in 'data'
         setJobTitle(`${job.title}`);
       } catch (err) {

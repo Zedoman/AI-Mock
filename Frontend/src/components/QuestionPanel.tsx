@@ -52,7 +52,7 @@ const QuestionPanel = ({
     const fetchJob = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://34.207.159.158:5000/api/jobs/${jobId}`);
+        const response = await axios.get(`https://34.207.159.158/api/jobs/${jobId}`);
         const fetchedJob = response.data.data; // Assuming backend wraps in 'data'
         setJob(fetchedJob);
       } catch (err) {

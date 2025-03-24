@@ -30,7 +30,7 @@ const Practice = () => {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("http://34.207.159.158:5000/api/jobs", {
+        const response = await fetch("https://34.207.159.158/api/jobs", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

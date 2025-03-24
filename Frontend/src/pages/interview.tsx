@@ -65,7 +65,7 @@ const Interview = () => {
   useEffect(() => {
     const fetchJobData = async () => {
       try {
-        const response = await axios.get(`http://34.207.159.158:5000/api/jobs/${jobId}`);
+        const response = await axios.get(`https://34.207.159.158/api/jobs/${jobId}`);
         const job = response.data.data;
         setProblemTitle(job.codingQuestion.title);
         setProblemType(job.codingQuestion.title);
@@ -270,7 +270,7 @@ const Interview = () => {
       }
 
       const response = await axios.post(
-        "http://34.207.159.158:5000/api/code/submit",
+        "https://34.207.159.158/api/code/submit",
         {
           userId: "user123",
           jobId,
@@ -308,7 +308,7 @@ const Interview = () => {
       }
   
       const response = await axios.post(
-        "http://34.207.159.158:5000/api/code/submit",
+        "https://34.207.159.158/api/code/submit",
         {
           userId: "user123",
           jobId,
