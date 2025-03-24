@@ -32,7 +32,7 @@ graph TD
     A[User Lands on Platform] --> B[View Job Listings]
     B --> C{Select Job Position}
     C --> D[View Job Details]
-    D --> E[Click "Take Mock Interview" Button]
+    D --> E[Click 'Take Mock Interview' Button]
     E --> F[Load Interview Interface]
     
     subgraph "Interview Setup"
