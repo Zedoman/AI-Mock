@@ -9,7 +9,7 @@ The AI Mock Interview Simulator is designed to help job seekers prepare for tech
 ## Features
 
 ### **Job Listings View**  
-A clean grid layout of job positions fetched from an API (`http://34.207.159.158:5000/api/jobs`). Each job is displayed as a card with details like title, company, location, and description, along with a prominent "Take Mock Interview" button to start the interview process.
+A clean grid layout of job positions fetched from an API (`http://localhost:5000/api/jobs`). Each job is displayed as a card with details like title, company, location, and description, along with a prominent "Take Mock Interview" button to start the interview process.
 
 ### **Split-Screen Coding Interface**  
 A LeetCode-style layout with:
@@ -78,7 +78,7 @@ graph TD
 ### **Job Listings View (Practice Page)**
 The `/practice` route serves as the main entry point for users to browse job listings. Key details include:
 
-- **API Integration**: Fetches job data from `http://34.207.159.158:5000/api/jobs` using the Fetch API.
+- **API Integration**: Fetches job data from `http://localhost:5000/api/jobs` using the Fetch API.
 - **State Management**: Uses React’s `useState` and `useEffect` hooks to manage job data, loading state, and error state.
 - **Error Handling**:
   - "Loading jobs..." while fetching data.
@@ -148,7 +148,7 @@ Ensure your backend server is running at `http://localhost:5000` and provides th
 #### 1. GET /api/jobs
 - **Purpose:** Fetch all available jobs.
 - **Method:** GET
-- **URL:** `http://34.207.159.158:5000/api/jobs`
+- **URL:** `http://localhost:5000/api/jobs`
 - **Response Format:**
 ```json
 {
@@ -178,7 +178,7 @@ Ensure your backend server is running at `http://localhost:5000` and provides th
 #### 2. POST /api/jobs
 - **Purpose:** Create a new job listing.
 - **Method:** POST
-- **URL:** `http://34.207.159.158:5000/api/jobs`
+- **URL:** `http://localhost:5000/api/jobs`
 - **Request Body:**
 ```json
 {
@@ -199,22 +199,22 @@ Ensure your backend server is running at `http://localhost:5000` and provides th
 #### 3. GET /api/jobs/:id
 - **Purpose:** Fetch a specific job by its ID.
 - **Method:** GET
-- **URL:** `http://34.207.159.158:5000/api/jobs/:id`
+- **URL:** `http://localhost:5000/api/jobs/:id`
 
 #### 4. GET /api/interview/:jobId
 - **Purpose:** Start a mock interview for a specific job ID.
 - **Method:** GET
-- **URL:** `http://34.207.159.158:5000/api/interview/:jobId`
+- **URL:** `http://localhost:5000/api/interview/:jobId`
 
 #### 5. POST /api/code/submit
 - **Purpose:** Submit code for a job’s coding question and get AI feedback.
 - **Method:** POST
-- **URL:** `http://34.207.159.158:5000/api/code/submit`
+- **URL:** `http://localhost:5000/api/code/submit`
 
 #### 6. POST /api/jobs/auto
 - **Purpose:** Automatically design a job listing using AI.
 - **Method:** POST
-- **URL:** `http://34.207.159.158:5000/api/jobs/auto`
+- **URL:** `http://localhost:5000/api/jobs/auto`
 
 ## **Final Notes**
 This README now includes the full implementation details for the AI Mock Interview Simulator. Let me know if you need additional details, bro! 🚀
