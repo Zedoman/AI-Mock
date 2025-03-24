@@ -6,6 +6,7 @@ const interviewRoutes = require('./routes/interviewRoutes');
 const codeReviewRoutes = require('./routes/codeReviewRoutes');
 const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
+const http = require('http');
 
 
 const app = express();
@@ -33,7 +34,7 @@ const startServer = async () => {
 };
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to IGalaxy API" });
+  res.status(200).json({ message: "Welcome to Interviewer" });
 });
 
 startServer();
